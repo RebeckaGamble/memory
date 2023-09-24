@@ -6,7 +6,7 @@ let firstCard, secondCard;
 
 function flipCard() {
   if (lockBoard) return;
-    if (this === firstCard) return; //if double clicking on one card, no match!
+  if (this === firstCard) return; //if double clicking on one card, no match!
 
   this.classList.add("flip");
 
@@ -50,8 +50,17 @@ function unflipCards() {
 
 //after each round, reset board - destructuring assignment
 function resetBoard() {
-[hasFlippedCard, lockBoard] = [false, false];
-[firstCard, secondCard] = [null, null]
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
+
+//immediately invoked function expression
+(function shuffle() {
+  cards.forEach((card) => {
+    //shuffle the cards, give cards a random nr
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
