@@ -4,30 +4,49 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  display: flex;
-  height: 100vh;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: blue;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin: 28px;
+  height: 70px;
+}
+
+.memory-title {
+  color: white;
+  text-align: center;
 }
 
 .memory-game {
-  width: 640px;
-  height: 640px;
-  margin: auto;
+  flex-grow: 1;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid white;
+  justify-content: center;
+  /*align-items: flex-start;*/
   perspective: 1000px;
+  overflow: hidden;
 }
 
 .memory-card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  position: relative;
-  margin: 5px;
+  width: calc(33.333% - 10px);
+  max-width: 100px;
+  min-height: 100px;
+  margin: 4px;
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .memory-card:active {
@@ -36,7 +55,7 @@ body {
 }
 
 .memory-card.flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .front-face,
@@ -45,17 +64,84 @@ body {
   height: 100%;
   position: absolute;
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 8px;
   background: darkblue;
-  padding: 20px;
+  padding: 8px;
   backface-visibility: hidden;
 }
 
 .front-face {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  margin-top: auto;
+  padding: 16px 0px;
+}
+
+#timer {
+  color: white;
+  text-align: center;
+  padding: 16px 0px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn {
+    width: 80px; 
+    height: 36px;
+}
+
+#tryAgainBtn, #playAgainBtn {
+    display: none;
+}
+
+@media (min-width: 560px) {
+  .back-face,
+  .front-face {
+    padding: 16px;
+  }
+
+  .memory-game {
+    padding: 8px;
+    min-width: 530px;
+    max-width: 70%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .memory-card {
+    flex-basis: calc(33.333% - 16px);
+    padding-top: calc(33.333% - 16px);
+    padding: 2px;
+    max-width: 33%;
+    min-width: 220px;
+    min-height: 220px;
+  }
+}
+
+@media (min-width: 760px) {
+  .memory-game {
+    min-width: 700px;
+    max-width: 50%;
+    padding: 16px;
+    border: 2px solid white;
+  }
+
+  .memory-card {
+    flex-basis: calc(25% - 32px);
+  }
 }
