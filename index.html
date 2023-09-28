@@ -7,75 +7,76 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="memory-title">Memory Game</h1>
-    </header>
-    <section class="memory-game">
-      <div class="memory-card" data-framework="birds">
-        <img class="front-face" src="img/birds.svg" alt="birds" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="birds">
-        <img class="front-face" src="img/birds.svg" alt="birds" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="ladybug">
-        <img class="front-face" src="img/ladybug.svg" alt="ladybug" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="ladybug">
-        <img class="front-face" src="img/ladybug.svg" alt="ladybug" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="monkey">
-        <img class="front-face" src="img/monkey.svg" alt="monkey" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="monkey">
-        <img class="front-face" src="img/monkey.svg" alt="monkey" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="piglet">
-        <img class="front-face" src="img/piglet.svg" alt="piglet" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="piglet">
-        <img class="front-face" src="img/piglet.svg" alt="piglet" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="pinguin">
-        <img class="front-face" src="img/pinguin.svg" alt="pinguin" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="pinguin">
-        <img class="front-face" src="./img/pinguin.svg" alt="pinguin" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="sheep">
-        <img class="front-face" src="img/sheep.svg" alt="sheep" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-      <div class="memory-card" data-framework="sheep">
-        <img class="front-face" src="img/sheep.svg" alt="sheep" />
-        <img class="back-face" src="img/background.svg" alt="background" />
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <footer class="footer">
-      <p id="timer">Time left: 60</p>
-      <button id="startGameBtn" class="btn">Start Game</button>
-      <div id="gameOverModal">
-        <div class="modal-content">
-          <h2 id="gameOverMsg"></h2>
-          <button id="tryAgainBtn" class="btn">
-            Try Again
-          </button>
-          <button id="playAgainBtn" class="btn">
-            Play again
-          </button>
+    <div class="memo">
+      <header class="header">
+        <h1 class="memory-title">Memory Game</h1>
+      </header>
+      <section class="memory-game">
+        <div class="memory-card" data-framework="birds">
+          <img class="front-face" src="img/birds.svg" alt="birds" />
+          <img class="back-face" src="img/background.svg" alt="background" />
         </div>
+        <div class="memory-card" data-framework="birds">
+          <img class="front-face" src="img/birds.svg" alt="birds" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="ladybug">
+          <img class="front-face" src="img/ladybug.svg" alt="ladybug" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="ladybug">
+          <img class="front-face" src="img/ladybug.svg" alt="ladybug" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="monkey">
+          <img class="front-face" src="img/monkey.svg" alt="monkey" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="monkey">
+          <img class="front-face" src="img/monkey.svg" alt="monkey" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="piglet">
+          <img class="front-face" src="img/piglet.svg" alt="piglet" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="piglet">
+          <img class="front-face" src="img/piglet.svg" alt="piglet" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="pinguin">
+          <img class="front-face" src="img/pinguin.svg" alt="pinguin" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="pinguin">
+          <img class="front-face" src="./img/pinguin.svg" alt="pinguin" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="sheep">
+          <img class="front-face" src="img/sheep.svg" alt="sheep" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+        <div class="memory-card" data-framework="sheep">
+          <img class="front-face" src="img/sheep.svg" alt="sheep" />
+          <img class="back-face" src="img/background.svg" alt="background" />
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <footer class="footer">
+        <p id="timer">Time left: 60</p>
+        <button id="startGameBtn" class="btn">Start Game</button>
+        <div id="gameOverModal">
+          <div class="modal-content">
+            <h2 id="gameOverMsg"></h2>
+            <button id="tryAgainBtn" class="btn">Try Again</button>
+            <button id="playAgainBtn" class="btn">Play again</button>
+          </div>
+        </div>
+      </footer>
+      <div class="confetti-container">
+        <div class="confetti"></div>
       </div>
-    </footer>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
